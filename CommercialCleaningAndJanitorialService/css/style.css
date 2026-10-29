@@ -324,14 +324,19 @@ p  { color: var(--clr-text-muted); line-height: 1.8; }
 .nav-link.active::after { transform: scaleX(1); }
 
 /* Dropdown trigger arrow */
+.nav-item.has-dropdown > .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
 .nav-item.has-dropdown > .nav-link::before {
   content: '';
+  order: 1;
   display: inline-block;
   width: 0; height: 0;
   border-inline-start: 4px solid transparent;
   border-inline-end: 4px solid transparent;
   border-block-start: 4px solid currentColor;
-  margin-inline-start: 4px;
   vertical-align: middle;
   transition: transform var(--t);
 }
